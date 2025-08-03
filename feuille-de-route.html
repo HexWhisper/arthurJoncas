@@ -3,20 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titre de Votre Nouvelle Page</title>
+    <title>Portail du Projet - Agence 2.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* Vous pouvez copier les styles de votre portail ici */
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        :root {
+            --bg-color: #f3f4f6; /* gray-100 */
+            --text-color: #1F2937; /* gray-800 */
+            --primary-color: #1F2937; /* Noir Mat */
+            --secondary-color: #4d533c; /* Kaki */
+            --accent-color: #c2410c; /* Orange Brûlé */
+            --neutral-color: #9ca3af; /* Gris Béton */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
     </style>
 </head>
-<body class="bg-gray-100">
-    <div class="container mx-auto p-8">
-        <h1 class="text-3xl font-bold">Contenu de votre nouvelle page</h1>
-        <p class="mt-4">Ajoutez votre contenu ici...</p>
-        <a href="./index.html" class="text-blue-500 hover:underline mt-8 inline-block">&larr; Retour au portail</a>
+<body class="antialiased">
+
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-white shadow-md">
+            <div class="container mx-auto px-6 py-4">
+                <h1 class="text-3xl font-bold text-[var(--primary-color)]">Portail du Projet - Agence 2.0</h1>
+                <p class="text-gray-600 mt-1">Tableau de bord central pour les livrables du projet Arthur Joncas.</p>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-6 py-12">
+            <h2 class="text-2xl font-bold mb-8">Livrables Clés</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1: Prototype du Site Web -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-[var(--primary-color)]">Prototype du Site Web</h3>
+                        <p class="mt-2 text-gray-600">La version interactive du site web d'Arthur Joncas, appliquant la nouvelle direction artistique "Oeuforie". Ce prototype permet de tester la navigation et de ressentir l'expérience utilisateur.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <!-- NOTE: Pour que ce lien fonctionne, enregistrez le prototype sous le nom "prototype-site-web.html" dans le même dossier que ce fichier. -->
+                        <a href="./prototype-site-web.html" target="_blank" class="block w-full text-center bg-[var(--accent-color)] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all">
+                            Ouvrir le Prototype
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Style Tile -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-[var(--primary-color)]">Style Tile "Oeuforie"</h3>
+                        <p class="mt-2 text-gray-600">La planche d'inspiration visuelle qui définit l'identité de la marque. Elle présente la palette de couleurs, la typographie et les exemples de composants validés.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <!-- NOTE: Pour que ce lien fonctionne, enregistrez le style tile sous le nom "style-tile.html" dans le même dossier que ce fichier. -->
+                        <a href="./style-tile.html" target="_blank" class="block w-full text-center bg-[var(--primary-color)] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all">
+                            Consulter le Style Tile
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Suivi Financier -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-[var(--primary-color)]">Suivi Financier du Projet</h3>
+                        <p class="mt-2 text-gray-600">Le chiffrier détaillé qui assure une transparence totale sur les coûts, les jalons de paiement et le budget global du projet, aligné sur notre entente initiale.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <!-- NOTE: Pour que ce lien fonctionne, enregistrez le suivi financier sous le nom "suivi-financier.html" dans le même dossier que ce fichier. -->
+                        <a href="./suivi-financier.html" target="_blank" class="block w-full text-center bg-gray-200 text-[var(--primary-color)] font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-all">
+                            Voir le Suivi Financier
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="bg-white mt-12">
+            <div class="container mx-auto px-6 py-4 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 - Projet Agence 2.0</p>
+            </div>
+        </footer>
     </div>
+
 </body>
 </html>
