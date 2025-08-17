@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prototype - Marque Arthur Joncas</title>
+    <title>Feuille de Route - Projet Agence 2.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,88 +14,113 @@
             --secondary-color: #4d533c; /* Kaki Foncé */
             --accent-color: #c2410c; /* Orange Brûlé */
             --neutral-color: #9ca3af; /* Gris Béton */
-            --bg-color: #ffffff;
-            --bg-alt-color: #f9fafb;
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--primary-color);
+            background-color: #f9fafb;
         }
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
-        .section-title {
-            color: var(--primary-color);
-        }
-        .accent-text {
-            color: var(--accent-color);
-        }
+        .status-completed { background-color: #dcfce7; color: #166534; }
+        .status-inprogress { background-color: #fef9c3; color: #854d0e; }
+        .status-todo { background-color: #e5e7eb; color: #4b5563; }
+        .status-pending { background-color: #ffedd5; color: #9a3412; }
     </style>
 </head>
-<body class="antialiased">
-
-    <!-- Header -->
-    <header class="py-20 text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(25, 37, 51, 0.7), rgba(25, 37, 51, 0.7)), url('https://placehold.co/1200x400/4d533c/FFFFFF?text=Image+Immobilier+Chic');">
-        <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-6xl font-bold text-white">L'Architecte de vos Transitions de Vie</h1>
-            <p class="mt-4 text-xl text-gray-300">Plus qu'un courtier, un partenaire de confiance stratégique.</p>
-        </div>
-    </header>
-
-    <main class="container mx-auto px-6 py-16 space-y-20">
-        <!-- Notre Histoire -->
-        <section class="text-center">
-            <h2 class="text-3xl font-bold section-title">Notre Histoire</h2>
-            <p class="mt-4 max-w-3xl mx-auto text-gray-600 leading-relaxed">
-                Après 25 ans au service du public et une carrière d'enseignant qui m'a appris l'importance de la clarté et de la rigueur, j'ai trouvé ma véritable passion dans l'immobilier. Pour moi, chaque transaction est plus qu'un contrat ; c'est un projet de vie que je prends personnellement à cœur.
-            </p>
-        </section>
-
-        <!-- Nos Valeurs -->
-        <section>
-            <h2 class="text-3xl font-bold text-center section-title mb-12">Nos Valeurs Non Négociables</h2>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold accent-text">Respect & Attentes</h3>
-                    <p class="mt-2 text-gray-600">La première étape est toujours de définir clairement vos attentes pour garantir une collaboration basée sur le respect mutuel.</p>
+<body class="p-4 sm:p-6 md:p-8">
+    <div class="max-w-7xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
+        <header class="border-b border-gray-200 pb-6 mb-8">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-900">Feuille de Route Détaillée</h1>
+                    <p class="mt-2 text-sm text-gray-600">Plan de match officiel pour le Projet Agence 2.0. Version du 17 août 2025.</p>
                 </div>
-                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold accent-text">Transparence Radicale</h3>
-                    <p class="mt-2 text-gray-600">Vous serez toujours informé de la vérité sur la valeur de votre bien et les défis d'une transaction.</p>
-                </div>
-                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold accent-text">Réalisation des Objectifs</h3>
-                    <p class="mt-2 text-gray-600">Notre mission est de concrétiser vos objectifs, en nous assurant que chaque décision sert vos intérêts.</p>
-                </div>
+                <a href="./portail.html" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+                    <span>Retour au Portail</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Points de Décision -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Points de Décision en Attente</h2>
+            <div class="overflow-x-auto bg-white rounded-lg shadow">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">ID</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Point de Décision</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Contexte</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Statut</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">PD-01</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Activer l'intégration IDX complète de Matrix ?</td>
+                            <td class="px-6 py-4 text-sm text-gray-600">Transformer le site en un moteur d'acquisition de clients en affichant toutes les propriétés du marché.</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-pending rounded-full">En attente</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">PD-02</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Choix du Thème WordPress</td>
+                            <td class="px-6 py-4 text-sm text-gray-600">Valider la recommandation "Houzez" comme fondation visuelle et technique du site.</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-pending rounded-full">En attente</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
-        <!-- Notre "Sauce Secrète" -->
-        <section class="bg-alt-color py-16 rounded-lg">
-            <h2 class="text-3xl font-bold text-center section-title mb-12">Ce Qui Nous Distingue</h2>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold">Le Contact Humain & Direct</h3>
-                    <p class="mt-2 text-gray-600">Vous n'appellerez jamais une secrétaire. Vous appellerez Arthur. Une disponibilité qui réduit le stress et garantit la paix d'esprit.</p>
+        <!-- Phases du projet -->
+        <div class="space-y-12">
+            <!-- Phase 1 -->
+            <section>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Phase 1 : Fondation & Stratégie (En cours)</h2>
+                <div class="overflow-x-auto bg-white rounded-lg shadow">
+                    <table class="min-w-full divide-y divide-gray-200">
+                         <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">ID</th>
+                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Tâche</th>
+                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Dates</th>
+                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Statut</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr class="bg-green-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">1.8</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Sélection & Configuration Hébergement / Courriels</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">4 août - 15 août</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">1.9</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Rédaction des Politiques de Conformité (Loi 25)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">18 août - 22 août</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-inprogress rounded-full">En cours</span></td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">1.10</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Configuration Initiale du CRM HubSpot</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">25 août - 5 sept.</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
+                            </tr>
+                             <tr>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">1.11</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Lancement Développement Web (Maquettes)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">8 sept. - 19 sept.</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold">L'Outil de Présentation Personnalisé</h3>
-                    <p class="mt-2 text-gray-600">Dès notre premier rendez-vous, vous recevrez un rapport d'analyse de marché détaillé, preuve de notre engagement envers votre projet.</p>
-                </div>
-                <div class="p-6 md:col-span-2 text-center">
-                     <h3 class="text-xl font-bold">La Maîtrise de la Présentation Visuelle</h3>
-                    <p class="mt-2 text-gray-600">Nous optimisons la valeur perçue de votre propriété grâce à une présentation visuelle (staging, photos, vidéos) de haute qualité.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer style="background-color: var(--primary-color);" class="text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Arthur Joncas - Tous droits réservés.</p>
+            </section>
+            
+            <p class="text-center text-gray-500 italic">Les phases 2 (Déploiement) et 3 (Croissance) suivront, comme détaillé dans le plan de projet.</p>
         </div>
-    </footer>
-
+    </div>
 </body>
 </html>
