@@ -11,7 +11,9 @@
     <style>
         :root {
             --primary-color: #1F2937; /* Noir Mat */
+            --secondary-color: #4d533c; /* Kaki Foncé */
             --accent-color: #c2410c; /* Orange Brûlé */
+            --neutral-color: #9ca3af; /* Gris Béton */
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -32,7 +34,7 @@
             <div class="flex justify-between items-center">
                 <div>
                     <h1 class="text-3xl font-bold text-gray-900">Feuille de Route Détaillée</h1>
-                    <p class="mt-2 text-sm text-gray-600">Plan de match officiel pour le Projet Agence 2.0. Version du 16 août 2025.</p>
+                    <p class="mt-2 text-sm text-gray-600">Plan de match officiel pour le Projet Agence 2.0. Version du 17 août 2025.</p>
                 </div>
                 <a href="./portail.html" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
@@ -42,81 +44,81 @@
         </header>
 
         <!-- Points de Décision -->
-        <div class="mb-10">
+        <section class="mb-12">
             <h2 class="text-2xl font-bold text-gray-800 mb-4">Points de Décision en Attente</h2>
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto bg-white rounded-lg shadow">
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
                         <tr>
-                            <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">ID</th>
-                            <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Point de Décision</th>
-                            <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Contexte</th>
-                            <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Statut</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">ID</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Point de Décision</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Contexte</th>
+                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Statut</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
                         <tr>
-                            <td class="px-4 py-3 text-sm font-semibold">PD-01</td>
-                            <td class="px-4 py-3 text-sm font-medium">Activer l'intégration IDX complète de Matrix ?</td>
-                            <td class="px-4 py-3 text-sm text-gray-600">Transformer le site en un moteur d'acquisition de clients en affichant toutes les propriétés du marché.</td>
-                            <td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight text-orange-700 bg-orange-100 rounded-full">En attente</span></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">PD-01</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Activer l'intégration IDX complète de Matrix ?</td>
+                            <td class="px-6 py-4 text-sm text-gray-600">Transformer le site en un moteur d'acquisition de clients en affichant toutes les propriétés du marché.</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-pending rounded-full">En attente</span></td>
                         </tr>
                         <tr>
-                            <td class="px-4 py-3 text-sm font-semibold">PD-02</td>
-                            <td class="px-4 py-3 text-sm font-medium">Choix du Thème WordPress</td>
-                            <td class="px-4 py-3 text-sm text-gray-600">Valider la recommandation "Houzez" comme fondation visuelle et technique du site.</td>
-                            <td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight text-orange-700 bg-orange-100 rounded-full">En attente</span></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">PD-02</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Choix du Thème WordPress</td>
+                            <td class="px-6 py-4 text-sm text-gray-600">Valider la recommandation "Houzez" comme fondation visuelle et technique du site.</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-pending rounded-full">En attente</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </div>
+        </section>
 
         <!-- Phases du projet -->
-        <div class="space-y-10">
+        <div class="space-y-12">
             <!-- Phase 1 -->
-            <div>
+            <section>
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Phase 1 : Fondation & Stratégie (En cours)</h2>
-                <div class="overflow-x-auto">
+                <div class="overflow-x-auto bg-white rounded-lg shadow">
                     <table class="min-w-full divide-y divide-gray-200">
                          <thead class="bg-gray-50">
                             <tr>
-                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">ID</th>
-                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Tâche</th>
-                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Dates</th>
-                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Statut</th>
+                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">ID</th>
+                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Tâche</th>
+                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Dates</th>
+                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Statut</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
                             <tr class="bg-green-50">
-                                <td class="px-4 py-3 text-sm font-semibold">1.8</td>
-                                <td class="px-4 py-3 text-sm font-medium">Sélection & Configuration Hébergement / Courriels</td>
-                                <td class="px-4 py-3 text-sm text-gray-600">4 août - 15 août</td>
-                                <td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">1.8</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Sélection & Configuration Hébergement / Courriels</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">4 août - 15 août</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td>
                             </tr>
                             <tr>
-                                <td class="px-4 py-3 text-sm font-semibold">1.9</td>
-                                <td class="px-4 py-3 text-sm font-medium">Rédaction des Politiques de Conformité (Loi 25)</td>
-                                <td class="px-4 py-3 text-sm text-gray-600">18 août - 22 août</td>
-                                <td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-inprogress rounded-full">En cours</span></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">1.9</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Rédaction des Politiques de Conformité (Loi 25)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">18 août - 22 août</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-inprogress rounded-full">En cours</span></td>
                             </tr>
                             <tr>
-                                <td class="px-4 py-3 text-sm font-semibold">1.10</td>
-                                <td class="px-4 py-3 text-sm font-medium">Configuration Initiale du CRM HubSpot</td>
-                                <td class="px-4 py-3 text-sm text-gray-600">25 août - 5 sept.</td>
-                                <td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">1.10</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Configuration Initiale du CRM HubSpot</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">25 août - 5 sept.</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
                             </tr>
                              <tr>
-                                <td class="px-4 py-3 text-sm font-semibold">1.11</td>
-                                <td class="px-4 py-3 text-sm font-medium">Lancement Développement Web (Maquettes)</td>
-                                <td class="px-4 py-3 text-sm text-gray-600">8 sept. - 19 sept.</td>
-                                <td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">1.11</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Lancement Développement Web (Maquettes)</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">8 sept. - 19 sept.</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-            </div>
-            <!-- Autres Phases -->
+            </section>
+            
             <p class="text-center text-gray-500 italic">Les phases 2 (Déploiement) et 3 (Croissance) suivront, comme détaillé dans le plan de projet.</p>
         </div>
     </div>
