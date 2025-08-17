@@ -9,10 +9,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #1F2937; /* Noir Mat */
+            --secondary-color: #4d533c; /* Kaki Foncé */
+            --accent-color: #c2410c; /* Orange Brûlé */
+            --neutral-color: #9ca3af; /* Gris Béton */
+        }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* gray-100 */
-            color: #111827; /* gray-900 */
+            background-color: #f3f4f6;
+            color: var(--primary-color);
         }
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Playfair Display', serif;
@@ -30,36 +36,36 @@
     <div class="container mx-auto p-6 md:p-12">
 
         <header class="text-center border-b-2 border-gray-200 pb-8 mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Style Tile - Projet Agence 2.0</h1>
-            <p class="text-lg text-gray-600 mt-2">Version 2.0 - Palette "Oeuforie", validée le 30 juin 2025.</p>
+            <h1 class="text-4xl md:text-5xl font-bold">Style Tile - Projet Agence 2.0</h1>
+            <p class="text-lg text-gray-600 mt-2">Palette "Oeuforie", validée le 30 juin 2025.</p>
         </header>
 
         <main class="space-y-16">
 
             <!-- Section 1: Palette de Couleurs -->
             <section>
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">1. Palette de Couleurs "Oeuforie"</h2>
+                <h2 class="text-3xl font-bold mb-6">1. Palette de Couleurs "Oeuforie"</h2>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="swatch bg-[#1F2937]"></div>
+                        <div class="swatch" style="background-color: var(--primary-color);"></div>
                         <h3 class="text-xl font-bold mt-4">Noir Mat (Primaire)</h3>
                         <p class="text-gray-600 mt-1">#1F2937</p>
                         <p class="text-sm mt-2 font-semibold">Usage : Fonds principaux, textes. Évoque le chic, le prestige et la sobriété.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="swatch bg-[#4d533c]"></div>
+                        <div class="swatch" style="background-color: var(--secondary-color);"></div>
                         <h3 class="text-xl font-bold mt-4">Kaki Foncé</h3>
                         <p class="text-gray-600 mt-1">#4d533c</p>
                         <p class="text-sm mt-2 font-semibold">Usage : Éléments secondaires, fonds alternatifs. Apporte une touche organique et sophistiquée.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="swatch bg-[#9ca3af]"></div>
+                        <div class="swatch" style="background-color: var(--neutral-color);"></div>
                         <h3 class="text-xl font-bold mt-4">Gris Béton</h3>
                         <p class="text-gray-600 mt-1">#9ca3af</p>
-                        <p class="text-sm mt-2 font-semibold">Usage : Textes secondaires, bordures. Une base neutre et moderne qui rappelle le côté industriel.</p>
+                        <p class="text-sm mt-2 font-semibold">Usage : Textes secondaires, bordures. Une base neutre et moderne.</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
-                        <div class="swatch bg-[#c2410c]"></div>
+                        <div class="swatch" style="background-color: var(--accent-color);"></div>
                         <h3 class="text-xl font-bold mt-4">Orange Brûlé (Accent)</h3>
                         <p class="text-gray-600 mt-1">#c2410c</p>
                         <p class="text-sm mt-2 font-semibold">Usage : Boutons, liens, points clés. Une couleur chaude et accueillante qui attire l'œil.</p>
@@ -69,50 +75,38 @@
 
             <!-- Section 2: Typographie -->
             <section>
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">2. Typographie</h2>
+                <h2 class="text-3xl font-bold mb-6">2. Typographie</h2>
                 <div class="bg-white p-8 rounded-lg shadow-md">
                     <div class="grid md:grid-cols-2 gap-8">
                         <div>
                             <h3 class="text-2xl font-bold mb-4">Playfair Display (Titres)</h3>
-                            <p class="text-sm text-gray-600 mb-4">Conserve son rôle pour apporter une touche d'élégance et de prestige.</p>
+                            <p class="text-sm text-gray-600 mb-4">Pour apporter une touche d'élégance et de prestige.</p>
                             <h1 class="text-4xl font-bold">Titre de Niveau 1</h1>
                             <h2 class="text-3xl font-bold mt-2">Titre de Niveau 2</h2>
                         </div>
                         <div>
                             <h3 class="text-2xl font-bold mb-4">Inter (Corps du texte)</h3>
-                            <p class="text-sm text-gray-600 mb-4">Reste la police de choix pour sa lisibilité et sa modernité.</p>
+                            <p class="text-sm text-gray-600 mb-4">Pour sa lisibilité et sa modernité.</p>
                             <p class="text-base leading-relaxed">
-                                Ceci est un paragraphe d'exemple qui montre le rendu du corps du texte. Il est conçu pour être agréable à lire sur de longues périodes. La marque Arthur Joncas ne vend pas des maisons ; elle accompagne des transitions de vie cruciales.
+                                Ceci est un paragraphe d'exemple. La marque Arthur Joncas ne vend pas des maisons ; elle accompagne des transitions de vie cruciales.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Section 3: Inspiration Visuelle -->
+            <!-- Section 3: Composants UI -->
             <section>
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">3. Inspiration Visuelle : L'Oeuforie Steak Frites</h2>
-                <p class="mb-6 max-w-3xl text-gray-600">L'ambiance recherchée est un mélange de textures brutes (béton, bois) et d'éléments chics et chaleureux (éclairage tamisé, cuir cognac).</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <img src="https://placehold.co/600x400/9ca3af/1F2937?text=Textures+Brutes%0A(Béton,+Bois)" alt="Image représentant des textures brutes comme le béton et le bois" class="rounded-lg shadow-md w-full h-full object-cover">
-                    <img src="https://placehold.co/600x400/c2410c/FFFFFF?text=Ambiance+Chaleureuse%0A(Cuir,+Lumière)" alt="Image représentant une ambiance chaleureuse avec des tons de cuir et une lumière tamisée" class="rounded-lg shadow-md w-full h-full object-cover">
-                </div>
-            </section>
-
-            <!-- Section 4: Composants UI -->
-            <section>
-                <h2 class="text-3xl font-bold mb-6 text-gray-800">4. Exemples de Composants (Nouvelle Palette)</h2>
+                <h2 class="text-3xl font-bold mb-6">3. Exemples de Composants</h2>
                 <div class="bg-white p-8 rounded-lg shadow-md">
                     <h3 class="text-2xl font-bold mb-6">Boutons</h3>
                     <div class="flex flex-wrap items-center gap-4">
-                        <button class="bg-[#c2410c] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all">Bouton Primaire</button>
-                        <button class="bg-transparent border-2 border-[#1F2937] text-[#1F2937] font-bold py-3 px-6 rounded-lg hover:bg-[#1F2937] hover:text-white transition-all">Bouton Secondaire</button>
+                        <button style="background-color: var(--accent-color); color: white;" class="font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all">Bouton Primaire</button>
+                        <button style="border-color: var(--primary-color); color: var(--primary-color);" class="bg-transparent border-2 font-bold py-3 px-6 rounded-lg hover:bg-[var(--primary-color)] hover:text-white transition-all">Bouton Secondaire</button>
                     </div>
                 </div>
             </section>
-
         </main>
     </div>
-
 </body>
 </html>
