@@ -1,464 +1,101 @@
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur Joncas - Partenaire de Confiance en Immobilier</title>
+    <title>Prototype - Marque Arthur Joncas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
-    <!-- Chosen Palette: Warm Neutrals & Professional Harmony -->
-    <!-- Application Structure Plan: A single-page, thematic SPA with smooth-scroll navigation. The structure includes sections for Brand Essence, Values, Differentiators (UVP), Ideal Client Profiles (ICP), and Brand Keywords. Interactivity is key: clickable cards, tabs, and interactive hubs are used to present layered information cleanly, encouraging exploration rather than linear reading. This structure transforms a static text document into an engaging brand experience, making the core concepts more memorable and digestible for potential clients and partners. -->
-    <!-- Visualization & Content Choices: 
-        - Brand Pillars/Values -> Goal: Organize & Compare -> Presentation: 3 interactive cards (HTML/CSS/JS). Interaction: On click, reveals the "Ce que cela signifie pour le client" text. Justification: Keeps the UI clean and focuses user attention on one value at a time, encouraging deliberate interaction.
-        - UVP (Differentiators) -> Goal: Compare & Inform -> Presentation: 3 interactive feature cards with icons (HTML/CSS). Interaction: Subtle hover effects to highlight each unique point. Justification: Clearly separates and explains the key reasons to choose the brand.
-        - ICP (Client Profiles) -> Goal: Organize & Compare -> Presentation: Tabbed interface (HTML/CSS/JS). Interaction: Clicking a tab displays the detailed profile. Justification: Allows easy comparison between client personas without overwhelming the user with text.
-        - Keywords -> Goal: Organize & Relate -> Presentation: 3 interactive hubs (HTML/CSS/JS). Interaction: Clicking a hub reveals its associated keywords and explanation. Justification: A more creative and memorable visualization than a simple list, reinforcing the brand's core vocabulary.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
-
     <style>
+        :root {
+            --primary-color: #1F2937; /* Noir Mat */
+            --secondary-color: #4d533c; /* Kaki Foncé */
+            --accent-color: #c2410c; /* Orange Brûlé */
+            --neutral-color: #9ca3af; /* Gris Béton */
+            --bg-color: #ffffff;
+            --bg-alt-color: #f9fafb;
+        }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #F8F7F4;
-            color: #1E293B;
+            background-color: var(--bg-color);
+            color: var(--primary-color);
         }
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
-        .nav-link {
-            position: relative;
-            transition: color 0.3s;
+        .section-title {
+            color: var(--primary-color);
         }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #D97706; /* amber-600 */
-            transform-origin: bottom right;
-            transition: transform 0.3s ease-out;
-        }
-        .nav-link:hover::after, .nav-link.active-link::after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-        .nav-link:hover, .nav-link.active-link {
-             color: #D97706; /* amber-600 */
-        }
-        
-        .card-flip {
-            perspective: 1000px;
-        }
-        .card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.6s;
-            transform-style: preserve-3d;
-        }
-        .card-flip.is-flipped .card-inner {
-            transform: rotateY(180deg);
-        }
-        .card-face, .card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            cursor: pointer;
-        }
-        .card-back {
-            transform: rotateY(180deg);
-            background-color: #1E293B; /* slate-800 */
-            color: #F8F7F4;
-            align-items: flex-start;
-        }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-            animation: fadeIn 0.5s;
-        }
-        .tab-btn {
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .tab-btn.active {
-            background-color: #1E293B;
-            color: #F8F7F4;
-        }
-        .keyword-hub .keyword-list {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease-in-out;
-        }
-        .keyword-hub.active .keyword-list {
-            max-height: 500px;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .accent-text {
+            color: var(--accent-color);
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header & Navigation -->
-    <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-slate-800">Arthur Joncas</a>
-            <nav class="hidden md:flex space-x-8" id="nav-menu">
-                <a href="#marque" class="nav-link">Notre Marque</a>
-                <a href="#valeurs" class="nav-link">Nos Valeurs</a>
-                <a href="#difference" class="nav-link">Notre Différence</a>
-                <a href="#clients" class="nav-link">Nos Clients</a>
-                <a href="#mots-cles" class="nav-link">Nos Mots-clés</a>
-            </nav>
-            <button id="mobile-menu-button" class="md:hidden text-2xl p-2">☰</button>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95">
-            <a href="#marque" class="mobile-nav-link block text-center py-3 px-4 text-slate-800 hover:bg-slate-100">Notre Marque</a>
-            <a href="#valeurs" class="mobile-nav-link block text-center py-3 px-4 text-slate-800 hover:bg-slate-100">Nos Valeurs</a>
-            <a href="#difference" class="mobile-nav-link block text-center py-3 px-4 text-slate-800 hover:bg-slate-100">Notre Différence</a>
-            <a href="#clients" class="mobile-nav-link block text-center py-3 px-4 text-slate-800 hover:bg-slate-100">Nos Clients</a>
-            <a href="#mots-cles" class="mobile-nav-link block text-center py-3 px-4 text-slate-800 hover:bg-slate-100">Nos Mots-clés</a>
+    <!-- Header -->
+    <header class="py-20 text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(25, 37, 51, 0.7), rgba(25, 37, 51, 0.7)), url('https://placehold.co/1200x400/4d533c/FFFFFF?text=Image+Immobilier+Chic');">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold text-white">L'Architecte de vos Transitions de Vie</h1>
+            <p class="mt-4 text-xl text-gray-300">Plus qu'un courtier, un partenaire de confiance stratégique.</p>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="min-h-[60vh] flex items-center justify-center text-center px-4 py-20 bg-slate-100">
-            <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-6xl font-bold text-slate-800 leading-tight">L'Architecte de Vos Transitions de Vie</h1>
-                <p class="mt-6 text-lg md:text-xl text-slate-600">
-                    Plus qu'un courtier, un partenaire de confiance stratégique qui allie empathie humaine et rigueur professionnelle pour planifier, sécuriser et réaliser le projet le plus important de votre vie.
-                </p>
-            </div>
+    <main class="container mx-auto px-6 py-16 space-y-20">
+        <!-- Notre Histoire -->
+        <section class="text-center">
+            <h2 class="text-3xl font-bold section-title">Notre Histoire</h2>
+            <p class="mt-4 max-w-3xl mx-auto text-gray-600 leading-relaxed">
+                Après 25 ans au service du public et une carrière d'enseignant qui m'a appris l'importance de la clarté et de la rigueur, j'ai trouvé ma véritable passion dans l'immobilier. Pour moi, chaque transaction est plus qu'un contrat ; c'est un projet de vie que je prends personnellement à cœur.
+            </p>
         </section>
 
-        <!-- Section 1: Notre Marque -->
-        <section id="marque" class="py-20 md:py-28 scroll-mt-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold">Notre Slogan</h2>
-                    <p class="text-lg text-slate-600 mt-2">*La bonne transaction, pour la bonne personne, en toute confiance.*</p>
+        <!-- Nos Valeurs -->
+        <section>
+            <h2 class="text-3xl font-bold text-center section-title mb-12">Nos Valeurs Non Négociables</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold accent-text">Respect & Attentes</h3>
+                    <p class="mt-2 text-gray-600">La première étape est toujours de définir clairement vos attentes pour garantir une collaboration basée sur le respect mutuel.</p>
                 </div>
-                
-                <div class="max-w-4xl mx-auto text-lg text-center bg-white p-8 md:p-12 rounded-lg shadow-md">
-                    <h3 class="text-2xl font-bold mb-4 font-serif">Notre Histoire</h3>
-                    <p class="text-slate-700 leading-relaxed">
-                        “Après 25 ans au service du public et une carrière d'enseignant qui m'a appris l'importance de la clarté et de la rigueur, j'ai trouvé ma véritable passion dans l'immobilier en 2018. Ce n'était pas une simple réorientation, mais l'aboutissement de mon parcours : utiliser mon expérience humaine pour guider les gens dans des moments décisifs. Pour moi, chaque transaction est plus qu'un contrat ; c'est un projet de vie que je prends personnellement à cœur.
-                    </p>
-                    <p class="mt-4 text-slate-700 leading-relaxed">
-                        Qu'il s'agisse de l'excitation palpable d'un premier acheteur à qui l'on remet les clés de son avenir, ou de la sérénité d'un retraité qui tourne une page importante, mon rôle est d'être l'architecte de cette transition. Je m'investis pour voir la magie opérer : cette fusion parfaite entre un acheteur, un vendeur et une propriété, où chaque partie sent qu'elle a réalisé la meilleure opération possible. Mon rôle est d'être le bâtisseur de cette réussite, une transaction à la fois.”
-                    </p>
+                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold accent-text">Transparence Radicale</h3>
+                    <p class="mt-2 text-gray-600">Vous serez toujours informé de la vérité sur la valeur de votre bien et les défis d'une transaction.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Section 2: Nos Valeurs -->
-        <section id="valeurs" class="py-20 md:py-28 bg-slate-100 scroll-mt-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold">Nos Valeurs Non Négociables</h2>
-                    <p class="text-lg text-slate-600 mt-2">Les trois piliers qui soutiennent chaque décision.</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Card 1 -->
-                    <div class="card-flip h-[350px]">
-                        <div class="card-inner">
-                            <div class="card-face bg-white shadow-lg">
-                                <h3 class="text-2xl font-bold text-center">Respect & Définition des Attentes</h3>
-                                <p class="mt-4 text-slate-500">Cliquez pour en savoir plus</p>
-                            </div>
-                            <div class="card-back">
-                                <h4 class="font-bold text-xl mb-2 text-amber-400">Pour vous, client :</h4>
-                                <p>Notre première rencontre n'est pas un argumentaire de vente, c'est une session de stratégie. Nous ne mettons jamais de pression. Nous prenons le temps de comprendre vos objectifs, vos craintes et votre réalité avant même de parler de stratégie.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="card-flip h-[350px]">
-                        <div class="card-inner">
-                            <div class="card-face bg-white shadow-lg">
-                                <h3 class="text-2xl font-bold text-center">Transparence Radicale</h3>
-                                <p class="mt-4 text-slate-500">Cliquez pour en savoir plus</p>
-                            </div>
-                            <div class="card-back">
-                                <h4 class="font-bold text-xl mb-2 text-amber-400">Pour vous, client :</h4>
-                                <p>Vous aurez accès à un portail client sécurisé. Vous recevrez des rapports clairs. Plus important encore, nous vous dirons toujours la vérité sur la valeur de votre bien ou les défis d'une transaction. C'est notre devoir de vous protéger.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="card-flip h-[350px]">
-                        <div class="card-inner">
-                            <div class="card-face bg-white shadow-lg">
-                                <h3 class="text-2xl font-bold text-center">Réalisation des Objectifs</h3>
-                                <p class="mt-4 text-slate-500">Cliquez pour en savoir plus</p>
-                            </div>
-                            <div class="card-back">
-                                <h4 class="font-bold text-xl mb-2 text-amber-400">Pour vous, client :</h4>
-                                <p>Nous ne nous contentons pas d'espérer. Nous développons un plan marketing sur mesure, basé sur des données, pour attirer le bon profil d'acheteur et nous analysons le marché pour vous positionner de manière gagnante.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-bold accent-text">Réalisation des Objectifs</h3>
+                    <p class="mt-2 text-gray-600">Notre mission est de concrétiser vos objectifs, en nous assurant que chaque décision sert vos intérêts.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: Notre Différence -->
-        <section id="difference" class="py-20 md:py-28 scroll-mt-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold">Notre "Sauce Secrète"</h2>
-                    <p class="text-lg text-slate-600 mt-2">Ce qui nous distingue concrètement de la concurrence.</p>
+        <!-- Notre "Sauce Secrète" -->
+        <section class="bg-alt-color py-16 rounded-lg">
+            <h2 class="text-3xl font-bold text-center section-title mb-12">Ce Qui Nous Distingue</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">Le Contact Humain & Direct</h3>
+                    <p class="mt-2 text-gray-600">Vous n'appellerez jamais une secrétaire. Vous appellerez Arthur. Une disponibilité qui réduit le stress et garantit la paix d'esprit.</p>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                        <div class="text-4xl text-amber-600 mb-4">📞</div>
-                        <h3 class="text-xl font-bold mb-2">Le Contact Humain & Direct</h3>
-                        <p class="text-slate-600">Le client n'appelle jamais une secrétaire, il appelle Arthur. Une disponibilité qui élimine les intermédiaires, réduit le stress et garantit une paix d'esprit.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                        <div class="text-4xl text-amber-600 mb-4">📄</div>
-                        <h3 class="text-xl font-bold mb-2">L'Outil de Présentation Personnalisé</h3>
-                        <p class="text-slate-600">Dès la première rencontre, un rapport papier détaillé démontre que vous êtes notre priorité, avant même la signature d'un contrat.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
-                         <div class="text-4xl text-amber-600 mb-4">✨</div>
-                        <h3 class="text-xl font-bold mb-2">La Maîtrise de la Présentation Visuelle</h3>
-                        <p class="text-slate-600">Un soin obsessionnel est apporté à la mise en valeur de votre propriété pour attirer l'attention, justifier une valeur perçue plus élevée et générer de meilleures offres.</p>
-                    </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold">L'Outil de Présentation Personnalisé</h3>
+                    <p class="mt-2 text-gray-600">Dès notre premier rendez-vous, vous recevrez un rapport d'analyse de marché détaillé, preuve de notre engagement envers votre projet.</p>
+                </div>
+                <div class="p-6 md:col-span-2 text-center">
+                     <h3 class="text-xl font-bold">La Maîtrise de la Présentation Visuelle</h3>
+                    <p class="mt-2 text-gray-600">Nous optimisons la valeur perçue de votre propriété grâce à une présentation visuelle (staging, photos, vidéos) de haute qualité.</p>
                 </div>
             </div>
         </section>
-        
-        <!-- Section 4: Nos Clients -->
-        <section id="clients" class="py-20 md:py-28 bg-slate-100 scroll-mt-20">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold">Nos Clients Idéaux</h2>
-                    <p class="text-lg text-slate-600 mt-2">Nous ne sommes pas les meilleurs pour tout le monde. Nous sommes l'équipe de choix pour vous.</p>
-                </div>
-                
-                <div class="max-w-4xl mx-auto">
-                    <div class="flex flex-wrap justify-center border-b border-slate-300 mb-8">
-                        <button class="tab-btn active text-lg py-3 px-6 font-medium" data-tab="vendeur">Le Vendeur de Confiance</button>
-                        <button class="tab-btn text-lg py-3 px-6 font-medium" data-tab="acheteur">L'Acheteur en Transition</button>
-                        <button class="tab-btn text-lg py-3 px-6 font-medium" data-tab="focus">Notre Focus</button>
-                    </div>
-                    <div id="tab-contents" class="bg-white p-8 rounded-lg shadow-md min-h-[300px]">
-                        <div id="vendeur" class="tab-content active">
-                            <h3 class="text-2xl font-bold mb-4">Le Vendeur de Confiance</h3>
-                            <p class="font-semibold">Qui :</p>
-                            <p class="mb-4 text-slate-700">Une personne qui comprend la valeur de l'expertise, qui fait confiance à une analyse de marché rigoureuse pour fixer un prix juste et qui cherche un partenaire pour la guider.</p>
-                            <p class="font-semibold">Sa crainte :</p>
-                            <p class="mb-4 text-slate-700">Faire une erreur avec l'un des actifs les plus importants de sa vie, se sentir dépassé par le processus.</p>
-                            <p class="font-semibold">Spécialisation :</p>
-                            <p class="text-slate-700">Une sensibilité et une expertise reconnues dans les dossiers complexes et émotifs de **successions**, où le besoin d'une main experte et rassurante est à son comble.</p>
-                        </div>
-                        <div id="acheteur" class="tab-content">
-                            <h3 class="text-2xl font-bold mb-4">L'Acheteur en Transition de Vie</h3>
-                            <p class="font-semibold">Qui :</p>
-                            <p class="mb-4 text-slate-700">Le **premier acheteur** qui réalise le plus grand rêve de sa vie, ou le **retraité** qui entame un nouveau chapitre en vendant sa maison pour un condo.</p>
-                            <p class="font-semibold">Son besoin profond :</p>
-                            <p class="mb-4 text-slate-700">Il ne cherche pas une maison, il cherche de la **sécurité** dans sa décision. Il veut la certitude que son investissement est le bon pour son avenir.</p>
-                            <p class="font-semibold">Notre rôle :</p>
-                            <p class="text-slate-700">Apaiser son insécurité par l'éducation et l'analyse, et lui garantir que son choix correspond parfaitement à ses besoins à long terme.</p>
-                        </div>
-                         <div id="focus" class="tab-content">
-                            <h3 class="text-2xl font-bold mb-4">Ceux pour qui nous ne sommes pas la meilleure option</h3>
-                             <p class="text-slate-700">Pour garantir une collaboration fructueuse, il est important de reconnaître que notre approche ne convient pas à tout le monde. Nous ne sommes probablement pas la meilleure équipe pour :</p>
-                            <ul class="list-disc list-inside mt-4 text-slate-700 space-y-2">
-                                <li>Les chasseurs d'aubaines qui ne valorisent pas le conseil stratégique.</li>
-                                <li>Les vendeurs ayant des attentes de prix déconnectées des réalités du marché.</li>
-                                <li>Les personnes qui cherchent une relation purement transactionnelle et à bas prix.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Mots-clés -->
-        <section id="mots-cles" class="py-20 md:py-28 scroll-mt-20">
-             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold">L'ADN de Notre Marque</h2>
-                    <p class="text-lg text-slate-600 mt-2">Les mots qui infusent chacune de nos actions.</p>
-                </div>
-                <div class="grid lg:grid-cols-3 gap-8">
-                    <div class="keyword-hub border border-slate-200 rounded-lg p-6 bg-white shadow-sm cursor-pointer">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-2xl font-bold">Le Bouclier du Client</h3>
-                            <span class="hub-icon text-2xl transform transition-transform duration-300">+</span>
-                        </div>
-                        <div class="keyword-list mt-4">
-                            <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4">
-                                <li>Confiance</li>
-                                <li>Sécurité</li>
-                                <li>Transparence</li>
-                                <li>Rigueur</li>
-                                <li>Professionnalisme</li>
-                            </ul>
-                            <p class="text-sm text-slate-700 italic border-l-2 border-amber-500 pl-3">*Comment ça se traduit : Des processus clairs, un accès 24/7 à l'information, et des décisions basées sur des données pour protéger vos intérêts.*</p>
-                        </div>
-                    </div>
-                    <div class="keyword-hub border border-slate-200 rounded-lg p-6 bg-white shadow-sm cursor-pointer">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-2xl font-bold">Le Cœur du Projet</h3>
-                             <span class="hub-icon text-2xl transform transition-transform duration-300">+</span>
-                        </div>
-                        <div class="keyword-list mt-4">
-                            <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4">
-                                <li>Passion</li>
-                                <li>Humain</li>
-                                <li>Empathie</li>
-                                <li>Partenaire</li>
-                            </ul>
-                            <p class="text-sm text-slate-700 italic border-l-2 border-amber-500 pl-3">*Comment ça se traduit : Une écoute active des besoins et des craintes, et une relation qui va bien au-delà de la signature.*</p>
-                        </div>
-                    </div>
-                    <div class="keyword-hub border border-slate-200 rounded-lg p-6 bg-white shadow-sm cursor-pointer">
-                        <div class="flex justify-between items-center">
-                            <h3 class="text-2xl font-bold">L'Objectif Final</h3>
-                             <span class="hub-icon text-2xl transform transition-transform duration-300">+</span>
-                        </div>
-                        <div class="keyword-list mt-4">
-                           <ul class="list-disc list-inside text-slate-600 space-y-1 mb-4">
-                                <li>Réalisation</li>
-                                <li>Bâtisseur</li>
-                            </ul>
-                             <p class="text-sm text-slate-700 italic border-l-2 border-amber-500 pl-3">*Comment ça se traduit : Notre fierté ne vient pas du nombre de transactions, mais du nombre de projets de vie que nous avons aidé à construire avec succès.*</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <footer class="bg-slate-800 text-white py-8">
+    <footer style="background-color: var(--primary-color);" class="text-white py-8">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Arthur Joncas. Tous droits réservés.</p>
-            <p class="text-sm text-slate-400 mt-2">Conçu pour être votre partenaire de confiance en immobilier.</p>
+            <p>&copy; 2025 Arthur Joncas - Tous droits réservés.</p>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            try {
-                // Mobile menu toggle
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const mobileMenu = document.getElementById('mobile-menu');
-                if(mobileMenuButton && mobileMenu) {
-                    mobileMenuButton.addEventListener('click', () => {
-                        mobileMenu.classList.toggle('hidden');
-                    });
-                    
-                    const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-link');
-                    mobileLinks.forEach(link => {
-                       link.addEventListener('click', () => {
-                           mobileMenu.classList.add('hidden');
-                       }) 
-                    });
-                }
-
-                // Card flip interaction
-                const cards = document.querySelectorAll('.card-flip');
-                cards.forEach(card => {
-                    card.addEventListener('click', (e) => {
-                         if (e.target.tagName !== 'A') { 
-                            card.classList.toggle('is-flipped');
-                         }
-                    });
-                });
-
-                // Tab functionality
-                const tabContainer = document.querySelector('#clients .max-w-4xl.mx-auto');
-                if (tabContainer) {
-                    const tabButtons = tabContainer.querySelectorAll('.tab-btn');
-                    const tabContents = tabContainer.querySelectorAll('.tab-content');
-                    
-                    tabButtons.forEach(button => {
-                        button.addEventListener('click', () => {
-                            const tabId = button.dataset.tab;
-
-                            tabButtons.forEach(btn => btn.classList.remove('active'));
-                            button.classList.add('active');
-
-                            tabContents.forEach(content => {
-                                content.classList.remove('active');
-                                if (content.id === tabId) {
-                                    content.classList.add('active');
-                                }
-                            });
-                        });
-                    });
-                }
-
-
-                // Keyword hub accordion
-                const keywordHubs = document.querySelectorAll('.keyword-hub');
-                keywordHubs.forEach(hub => {
-                    hub.addEventListener('click', () => {
-                        hub.classList.toggle('active');
-                        const icon = hub.querySelector('.hub-icon');
-                        if (icon) {
-                           icon.style.transform = hub.classList.contains('active') ? 'rotate(45deg)' : 'rotate(0deg)';
-                        }
-                    });
-                });
-
-                // Active nav link on scroll
-                const sections = document.querySelectorAll('main > section');
-                const navLinks = document.querySelectorAll('#nav-menu a');
-
-                if (sections.length > 0 && navLinks.length > 0) {
-                     const observer = new IntersectionObserver((entries) => {
-                        let currentActiveId = '';
-                        // Find the last intersecting section from the top of the viewport.
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                currentActiveId = entry.target.id;
-                            }
-                        });
-
-                        navLinks.forEach(link => {
-                            link.classList.remove('active-link');
-                            const href = link.getAttribute('href');
-                            if (href && href.substring(1) === currentActiveId) {
-                                link.classList.add('active-link');
-                            }
-                        });
-
-                    }, { threshold: 0.3, rootMargin: '0px 0px -50% 0px' });
-
-                    sections.forEach(section => {
-                        if(section.id) {
-                           observer.observe(section);
-                        }
-                    });
-                }
-            } catch (error) {
-                console.error("An error occurred during script execution:", error);
-            }
-        });
-    </script>
 </body>
 </html>
