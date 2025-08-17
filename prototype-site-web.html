@@ -3,117 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prototype - Marque Arthur Joncas</title>
+    <title>Portail du Projet - Agence 2.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
+            --bg-color: #f3f4f6; /* gray-100 */
+            --text-color: #1F2937; /* gray-800 */
             --primary-color: #1F2937; /* Noir Mat */
-            --secondary-color: #4d533c; /* Kaki Foncé */
+            --secondary-color: #4d533c; /* Kaki */
             --accent-color: #c2410c; /* Orange Brûlé */
             --neutral-color: #9ca3af; /* Gris Béton */
-            --bg-color: #ffffff;
-            --bg-alt-color: #f9fafb;
         }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
-            color: var(--primary-color);
+            color: var(--text-color);
         }
-        h1, h2, h3, h4 {
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-        }
-        .section-title {
-            color: var(--primary-color);
-        }
-        .accent-text {
-            color: var(--accent-color);
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header -->
-    <header class="py-24 text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(25, 37, 51, 0.7), rgba(25, 37, 51, 0.7)), url('https://placehold.co/1200x400/4d533c/FFFFFF?text=Image+Immobilier+Chic');">
-        <div class="container mx-auto px-6">
-            <h1 class="text-4xl md:text-6xl font-bold text-white">L'Architecte de vos Transitions de Vie</h1>
-            <p class="mt-4 text-xl text-gray-300 max-w-2xl mx-auto">Plus qu'un courtier, un partenaire de confiance stratégique qui allie empathie humaine et rigueur professionnelle pour planifier, sécuriser et réaliser votre projet.</p>
-            <p class="mt-8 text-lg font-bold text-white accent-text">La bonne transaction, pour la bonne personne, en toute confiance.</p>
-        </div>
-    </header>
 
-    <main class="container mx-auto px-6 py-16 space-y-24">
-        <!-- Notre Histoire -->
-        <section class="text-center">
-            <h2 class="text-4xl font-bold section-title">Notre Histoire</h2>
-            <p class="mt-6 max-w-3xl mx-auto text-gray-700 leading-relaxed text-lg">
-                Après 25 ans au service du public et une carrière d'enseignant qui m'a appris l'importance de la clarté et de la rigueur, j'ai trouvé ma véritable passion dans l'immobilier. Pour moi, chaque transaction est plus qu'un contrat ; c'est un projet de vie que je prends personnellement à cœur. Mon rôle est d'être l'architecte de cette transition, le bâtisseur de votre réussite.
-            </p>
-        </section>
-
-        <!-- Nos Valeurs -->
-        <section>
-            <h2 class="text-4xl font-bold text-center section-title mb-12">Nos Valeurs Non Négociables</h2>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="text-center p-8 bg-white rounded-lg shadow-xl border-t-4 border-[var(--accent-color)]">
-                    <h3 class="text-2xl font-bold">Respect & Attentes</h3>
-                    <p class="mt-4 text-gray-600">La première étape est toujours de définir clairement vos attentes pour garantir une collaboration basée sur le respect mutuel.</p>
-                </div>
-                <div class="text-center p-8 bg-white rounded-lg shadow-xl border-t-4 border-[var(--accent-color)]">
-                    <h3 class="text-2xl font-bold">Transparence Radicale</h3>
-                    <p class="mt-4 text-gray-600">Vous serez toujours informé de la vérité sur la valeur de votre bien et les défis d'une transaction.</p>
-                </div>
-                <div class="text-center p-8 bg-white rounded-lg shadow-xl border-t-4 border-[var(--accent-color)]">
-                    <h3 class="text-2xl font-bold">Réalisation des Objectifs</h3>
-                    <p class="mt-4 text-gray-600">Notre mission est de concrétiser vos objectifs, en nous assurant que chaque décision sert vos intérêts.</p>
-                </div>
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-white shadow-md">
+            <div class="container mx-auto px-6 py-4">
+                <h1 class="text-3xl font-bold text-[var(--primary-color)]">Portail du Projet - Agence 2.0</h1>
+                <p class="text-gray-600 mt-1">Tableau de bord central pour les livrables du projet Arthur Joncas.</p>
             </div>
-        </section>
+        </header>
 
-        <!-- Notre "Sauce Secrète" -->
-        <section class="bg-alt-color -mx-6 px-6 py-20 rounded-lg">
-            <div class="container mx-auto">
-                <h2 class="text-4xl font-bold text-center section-title mb-12">Ce Qui Nous Distingue</h2>
-                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold accent-text">Le Contact Humain & Direct</h4>
-                        <p class="mt-2 text-gray-600">Vous n'appellerez jamais une secrétaire. Vous appellerez Arthur. Une disponibilité qui réduit le stress et garantit la paix d'esprit.</p>
+
+        <main class="flex-grow container mx-auto px-6 py-12">
+            <h2 class="text-2xl font-bold mb-8">Livrables Clés & Outils</h2>
+           
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+
+                <!-- Card 1: Prototype du Site Web -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-[var(--primary-color)]">Prototype du Site Web</h3>
+                        <p class="mt-2 text-gray-600">La version interactive du site web, appliquant la direction artistique "Oeuforie".</p>
                     </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold accent-text">L'Outil de Présentation Personnalisé</h4>
-                        <p class="mt-2 text-gray-600">Dès notre premier rendez-vous, vous recevrez un rapport d'analyse de marché détaillé, preuve de notre engagement envers votre projet.</p>
-                    </div>
-                    <div class="p-6 md:col-span-2 text-center">
-                         <h4 class="text-xl font-bold accent-text">La Maîtrise de la Présentation Visuelle</h4>
-                        <p class="mt-2 text-gray-600">Nous optimisons la valeur perçue de votre propriété grâce à une présentation visuelle (staging, photos, vidéos) de haute qualité.</p>
+                    <div class="p-6 bg-gray-50">
+                        <a href="./prototype-site-web.html" target="_blank" class="block w-full text-center bg-[var(--accent-color)] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all">
+                            Ouvrir le Prototype
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Clients Idéaux -->
-        <section>
-            <h2 class="text-4xl font-bold text-center section-title mb-12">Nos Clients Idéaux</h2>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10">
-                <div class="p-8 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold">Le Vendeur de Confiance</h3>
-                    <p class="mt-4 text-gray-600">Vous cherchez un partenaire qui respecte votre expertise pour établir le juste prix. Vous valorisez la confiance et la rigueur, particulièrement dans les dossiers complexes comme les successions.</p>
-                </div>
-                <div class="p-8 bg-white rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold">L'Acheteur en Transition</h3>
-                    <p class="mt-4 text-gray-600">Que vous soyez un premier acheteur ou un retraité, vous êtes à une étape charnière de votre vie. Vous cherchez un guide pour naviguer ce moment important avec sérénité.</p>
-                </div>
-            </div>
-        </section>
-    </main>
 
-    <footer style="background-color: var(--primary-color);" class="text-white py-10">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Arthur Joncas - Tous droits réservés.</p>
-        </div>
-    </footer>
+                <!-- Card 2: Style Tile -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-[var(--primary-color)]">Style Tile "Oeuforie"</h3>
+                        <p class="mt-2 text-gray-600">La planche d'inspiration visuelle qui définit l'identité de la marque.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <a href="./style-tile.html" target="_blank" class="block w-full text-center bg-[var(--primary-color)] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all">
+                            Consulter le Style Tile
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Card 3: Suivi Financier -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-[var(--primary-color)]">Suivi Financier</h3>
+                        <p class="mt-2 text-gray-600">Le chiffrier détaillé pour une transparence totale sur les coûts et les paiements.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <a href="./suivi-financier.html" target="_blank" class="block w-full text-center bg-gray-200 text-[var(--primary-color)] font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-all">
+                            Voir le Suivi
+                        </a>
+                    </div>
+                </div>
+               
+                <!-- Card 4: Feuille de Route (Planner) -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+                    <div class="p-6 flex-grow">
+                        <h3 class="text-xl font-bold text-[var(--primary-color)]">Feuille de Route</h3>
+                        <p class="mt-2 text-gray-600">Le plan d'action vivant du projet. C'est notre outil central pour suivre l'avancement des tâches.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50">
+                        <a href="#" target="_blank" class="block w-full text-center bg-[var(--secondary-color)] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all">
+                            Ouvrir le Plan (Planner)
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </main>
+
+
+        <footer class="bg-white mt-12">
+            <div class="container mx-auto px-6 py-4 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 - Projet Agence 2.0</p>
+            </div>
+        </footer>
+    </div>
+
 
 </body>
 </html>
