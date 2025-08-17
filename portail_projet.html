@@ -10,89 +10,92 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f3f4f6; /* gray-100 */
-            --text-color: #1F2937; /* gray-800 */
-            --primary-color: #1F2937; /* Noir Mat */
-            --secondary-color: #4d533c; /* Kaki */
-            --accent-color: #c2410c; /* Orange Brûlé */
-            --neutral-color: #9ca3af; /* Gris Béton */
+            --bg-color: #f3f4f6;
+            --primary-color: #1F2937;
+            --accent-color: #c2410c;
         }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--primary-color);
         }
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
     </style>
 </head>
 <body class="antialiased">
+    <div class="min-h-screen p-4 sm:p-8">
+        <div class="max-w-6xl mx-auto">
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold text-center">Tableau de Bord - Projet Agence 2.0</h1>
+                <p class="text-center text-gray-600 mt-2">Votre portail central pour tous les livrables et outils du projet Arthur Joncas.</p>
+            </header>
 
-    <div class="min-h-screen flex flex-col">
-        <header class="bg-white shadow-md">
-            <div class="container mx-auto px-6 py-4">
-                <h1 class="text-3xl font-bold text-[var(--primary-color)]">Portail du Projet - Agence 2.0</h1>
-                <p class="text-gray-600 mt-1">Tableau de bord central pour les livrables du projet Arthur Joncas.</p>
-            </div>
-        </header>
-
-        <main class="flex-grow container mx-auto px-6 py-12">
-            <h2 class="text-2xl font-bold mb-8">Livrables Clés</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Card 1: Prototype du Site Web -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-[var(--primary-color)]">Prototype du Site Web</h3>
-                        <p class="mt-2 text-gray-600">La version interactive du site web d'Arthur Joncas, appliquant la nouvelle direction artistique "Oeuforie". Ce prototype permet de tester la navigation et de ressentir l'expérience utilisateur.</p>
-                    </div>
-                    <div class="p-6 bg-gray-50">
-                        <!-- NOTE: Pour que ce lien fonctionne, enregistrez le prototype sous le nom "prototype-site-web.html" dans le même dossier que ce fichier. -->
-                        <a href="./prototype-site-web.html" target="_blank" class="block w-full text-center bg-[var(--accent-color)] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all">
-                            Ouvrir le Prototype
+            <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Colonne principale -->
+                <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Site Web -->
+                    <div class="card md:col-span-2 p-8 flex flex-col justify-center items-center text-center bg-[var(--primary-color)] text-white">
+                        <h2 class="text-3xl font-bold">Le Site Web d'Arthur Joncas</h2>
+                        <p class="mt-2 text-gray-300 max-w-md">L'actif central de la nouvelle marque. Le site est actuellement en construction.</p>
+                        <a href="http://arthurjoncas.ca" target="_blank" class="mt-6 bg-[var(--accent-color)] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-transform hover:scale-105">
+                            Accéder au Site
                         </a>
+                    </div>
+
+                    <!-- Feuille de Route -->
+                    <div class="card p-6">
+                        <h3 class="text-xl font-bold">Feuille de Route</h3>
+                        <p class="mt-2 text-gray-600 text-sm">Le plan de match complet du projet, avec toutes les phases et les tâches.</p>
+                        <a href="./pm/Feuille_route.html" target="_blank" class="mt-4 inline-block text-[var(--accent-color)] font-semibold hover:underline">Consulter le plan →</a>
+                    </div>
+
+                    <!-- Suivi Financier -->
+                    <div class="card p-6">
+                        <h3 class="text-xl font-bold">Suivi Financier</h3>
+                        <p class="mt-2 text-gray-600 text-sm">Le chiffrier détaillé pour une transparence totale sur les coûts et les paiements.</p>
+                        <a href="./suivi-financier.html" target="_blank" class="mt-4 inline-block text-[var(--accent-color)] font-semibold hover:underline">Voir le suivi →</a>
                     </div>
                 </div>
 
-                <!-- Card 2: Style Tile -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-[var(--primary-color)]">Style Tile "Oeuforie"</h3>
-                        <p class="mt-2 text-gray-600">La planche d'inspiration visuelle qui définit l'identité de la marque. Elle présente la palette de couleurs, la typographie et les exemples de composants validés.</p>
+                <!-- Colonne latérale -->
+                <div class="space-y-8">
+                    <div class="card p-6">
+                         <h3 class="text-xl font-bold mb-4">Livrables de Marque</h3>
+                         <div class="space-y-4">
+                            <a href="./prototype-site-web.html" target="_blank" class="block p-4 bg-gray-50 hover:bg-gray-100 rounded-lg">
+                                <p class="font-semibold">Prototype du Site Web</p>
+                                <p class="text-xs text-gray-500">La version interactive initiale.</p>
+                            </a>
+                             <a href="./style-tile.html" target="_blank" class="block p-4 bg-gray-50 hover:bg-gray-100 rounded-lg">
+                                <p class="font-semibold">Style Tile "Oeuforie"</p>
+                                <p class="text-xs text-gray-500">La direction artistique de la marque.</p>
+                            </a>
+                         </div>
                     </div>
-                    <div class="p-6 bg-gray-50">
-                        <!-- NOTE: Pour que ce lien fonctionne, enregistrez le style tile sous le nom "style-tile.html" dans le même dossier que ce fichier. -->
-                        <a href="./style-tile.html" target="_blank" class="block w-full text-center bg-[var(--primary-color)] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transition-all">
-                            Consulter le Style Tile
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Card 3: Suivi Financier -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-                    <div class="p-6 flex-grow">
-                        <h3 class="text-xl font-bold text-[var(--primary-color)]">Suivi Financier du Projet</h3>
-                        <p class="mt-2 text-gray-600">Le chiffrier détaillé qui assure une transparence totale sur les coûts, les jalons de paiement et le budget global du projet, aligné sur notre entente initiale.</p>
-                    </div>
-                    <div class="p-6 bg-gray-50">
-                        <!-- NOTE: Pour que ce lien fonctionne, enregistrez le suivi financier sous le nom "suivi-financier.html" dans le même dossier que ce fichier. -->
-                        <a href="./suivi-financier.html" target="_blank" class="block w-full text-center bg-gray-200 text-[var(--primary-color)] font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-all">
-                            Voir le Suivi Financier
-                        </a>
+                     <div class="card p-6">
+                         <h3 class="text-xl font-bold mb-4">Documents Stratégiques</h3>
+                         <div class="space-y-4">
+                            <a href="./shema.html" target="_blank" class="block p-4 bg-gray-50 hover:bg-gray-100 rounded-lg">
+                                <p class="font-semibold">Schéma du Moteur</p>
+                                <p class="text-xs text-gray-500">Notre vision stratégique.</p>
+                            </a>
+                         </div>
                     </div>
                 </div>
-
-            </div>
-        </main>
-
-        <footer class="bg-white mt-12">
-            <div class="container mx-auto px-6 py-4 text-center text-gray-500 text-sm">
-                <p>&copy; 2025 - Projet Agence 2.0</p>
-            </div>
-        </footer>
+            </main>
+        </div>
     </div>
-
 </body>
 </html>
