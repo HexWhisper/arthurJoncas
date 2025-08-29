@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feuille de Route - Projet Agence 2.0</title>
+    <title>Feuille de Route Complète - Projet Agence 2.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,6 @@
             --primary-color: #1F2937; /* Noir Mat */
             --secondary-color: #4d533c; /* Kaki Foncé */
             --accent-color: #c2410c; /* Orange Brûlé */
-            --neutral-color: #9ca3af; /* Gris Béton */
         }
         body {
             font-family: 'Inter', sans-serif;
@@ -31,213 +30,119 @@
 <body class="p-4 sm:p-6 md:p-8">
     <div class="max-w-7xl mx-auto bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
         <header class="border-b border-gray-200 pb-6 mb-8">
-            <h1 class="text-3xl font-bold text-gray-900">Feuille de Route Détaillée</h1>
-            <p class="mt-2 text-sm text-gray-600">Plan de match officiel pour le Projet Agence 2.0. Version du 17 août 2025.</p>
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-3xl font-bold text-gray-900">Feuille de Route Complète</h1>
+                    <p class="mt-2 text-sm text-gray-600">Plan de match officiel incluant l'historique complet du Projet Agence 2.0. Version du 29 août 2025.</p>
+                </div>
+            </div>
         </header>
 
-        <!-- Points de Décision -->
-        <section class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">Points de Décision en Attente</h2>
-            <div class="overflow-x-auto bg-white rounded-lg shadow">
+        <div class="mb-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Points de Décision</h2>
+            <div class="overflow-x-auto">
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
                         <tr>
-                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">ID</th>
-                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Point de Décision</th>
-                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Contexte</th>
-                            <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Statut</th>
+                            <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">ID</th>
+                            <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Point de Décision</th>
+                            <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Statut</th>
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y divide-gray-200">
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">PD-01</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Activer l'intégration IDX complète de Matrix ?</td>
-                            <td class="px-6 py-4 text-sm text-gray-600">Transformer le site en un moteur d'acquisition de clients en affichant toutes les propriétés du marché.</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-pending rounded-full">En attente</span></td>
+                         <tr>
+                            <td class="px-4 py-3 text-sm font-semibold">PD-01</td>
+                            <td class="px-4 py-3 text-sm font-medium">Activer l'intégration IDX complète de Matrix ?</td>
+                            <td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Décision Prise (Reporté)</span></td>
                         </tr>
                         <tr>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">PD-02</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Choix du Thème WordPress</td>
-                            <td class="px-6 py-4 text-sm text-gray-600">Valider la recommandation "Houzez" comme fondation visuelle et technique du site.</td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-pending rounded-full">En attente</span></td>
+                            <td class="px-4 py-3 text-sm font-semibold">PD-02</td>
+                            <td class="px-4 py-3 text-sm font-medium">Choix du Thème WordPress (WP Residence "Phoenix")</td>
+                            <td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Décision Prise</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 text-sm font-semibold">PD-03</td>
+                            <td class="px-4 py-3 text-sm font-medium">Valider la configuration de l'API Google Maps</td>
+                            <td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-pending rounded-full">En attente</span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </section>
+        </div>
 
-        <!-- Phases du projet -->
-        <div class="space-y-12">
-            
-            <!-- Phase 0 -->
-            <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Phase 0 : Stratégie Initiale & Lancement (Terminée)</h2>
-                <div class="overflow-x-auto bg-white rounded-lg shadow">
+        <div class="space-y-10">
+             <div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Phase 1 : Fondation & Stratégie</h2>
+                <div class="overflow-x-auto">
                     <table class="min-w-full divide-y divide-gray-200">
                          <thead class="bg-gray-50">
                             <tr>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">ID</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Tâche</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Statut</th>
+                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">ID</th>
+                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Tâche</th>
+                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Dates</th>
+                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Statut</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-semibold text-gray-700">0.1</td>
-                                <td class="px-6 py-4 text-sm font-medium text-gray-900">Rédaction du Rapport Stratégique</td>
-                                <td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-semibold text-gray-700">0.2</td>
-                                <td class="px-6 py-4 text-sm font-medium text-gray-900">Création de la Feuille de Route v1</td>
-                                <td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td>
-                            </tr>
+                            <tr><td class="px-4 py-3 text-sm">1.1</td><td class="px-4 py-3 text-sm">Atelier de Lancement Stratégique</td><td class="px-4 py-3 text-sm text-gray-600">24 juin - 28 juin</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">1.2</td><td class="px-4 py-3 text-sm">Définition de l'Identité de Marque</td><td class="px-4 py-3 text-sm text-gray-600">1 juil. - 5 juil.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">1.3</td><td class="px-4 py-3 text-sm">Analyse Concurrentielle (Ubee.ca)</td><td class="px-4 py-3 text-sm text-gray-600">8 juil. - 12 juil.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
+                             <tr><td class="px-4 py-3 text-sm">1.4</td><td class="px-4 py-3 text-sm">Analyse Technique (Intégration Matrix)</td><td class="px-4 py-3 text-sm text-gray-600">15 juil. - 19 juil.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
+                             <tr><td class="px-4 py-3 text-sm">1.5</td><td class="px-4 py-3 text-sm">Analyse Stratégique (Xpertsource.com)</td><td class="px-4 py-3 text-sm text-gray-600">22 juil. - 26 juil.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
+                             <tr><td class="px-4 py-3 text-sm">1.6</td><td class="px-4 py-3 text-sm">Sélection et Achat des Outils (Hébergement, Thème)</td><td class="px-4 py-3 text-sm text-gray-600">29 juil. - 2 août</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
+                             <tr><td class="px-4 py-3 text-sm">1.7</td><td class="px-4 py-3 text-sm">Configuration de l'Environnement Technique de Base</td><td class="px-4 py-3 text-sm text-gray-600">5 août - 9 août</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
+                             <tr><td class="px-4 py-3 text-sm">1.8</td><td class="px-4 py-3 text-sm">Onboarding Technique du Client (Microsoft 365)</td><td class="px-4 py-3 text-sm text-gray-600">12 août - 16 août</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">1.9</td><td class="px-4 py-3 text-sm">Rédaction Politiques de Conformité (Loi 25)</td><td class="px-4 py-3 text-sm text-gray-600">19 août - 23 août</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">1.10</td><td class="px-4 py-3 text-sm">Configuration Initiale du CRM HubSpot</td><td class="px-4 py-3 text-sm text-gray-600">26 août - 6 sept.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-inprogress rounded-full">En cours</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">1.11</td><td class="px-4 py-3 text-sm">Lancement Dév. Web (Maquettes & Personnalisation)</td><td class="px-4 py-3 text-sm text-gray-600">9 sept. - 20 sept.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-inprogress rounded-full">En cours</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">1.12</td><td class="px-4 py-3 text-sm">Configuration de l'API Google Maps</td><td class="px-4 py-3 text-sm text-gray-600">(En parallèle de 1.11)</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td></tr>
                         </tbody>
                     </table>
                 </div>
-            </section>
-
-            <!-- Phase 1 -->
-            <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Phase 1 : Fondation & Stratégie (En cours)</h2>
-                <div class="overflow-x-auto bg-white rounded-lg shadow">
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Phase 2 : Déploiement & Lancement</h2>
+                 <div class="overflow-x-auto">
                     <table class="min-w-full divide-y divide-gray-200">
                          <thead class="bg-gray-50">
                             <tr>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">ID</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Tâche</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Dates</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Statut</th>
+                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">ID</th>
+                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Tâche</th>
+                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Dates Prévues</th>
+                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Statut</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                            <!-- Tâches complétées -->
-                            <tr class="bg-green-50"><td class="px-6 py-4" colspan="4"><span class="font-bold text-sm text-green-800">Complété</span></td></tr>
-                            <tr><td class="px-6 py-4 text-sm font-semibold text-gray-700">1.1</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Atelier de Marque & Définition ICP</td><td class="px-6 py-4 text-sm text-gray-600">24 juin</td><td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
-                            <tr><td class="px-6 py-4 text-sm font-semibold text-gray-700">1.2</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Enregistrement du Nom de Domaine</td><td class="px-6 py-4 text-sm text-gray-600">25 juin</td><td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
-                            <tr><td class="px-6 py-4 text-sm font-semibold text-gray-700">1.3</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Création du Prototype "Oeuforie"</td><td class="px-6 py-4 text-sm text-gray-600">30 juin - 1er juil.</td><td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
-                            <tr><td class="px-6 py-4 text-sm font-semibold text-gray-700">1.4</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Analyse Concurrentielle (Ubee.ca)</td><td class="px-6 py-4 text-sm text-gray-600">28 juil. - 1er août</td><td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
-                            <tr><td class="px-6 py-4 text-sm font-semibold text-gray-700">1.5</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Analyse Technique (Matrix)</td><td class="px-6 py-4 text-sm text-gray-600">28 juil. - 1er août</td><td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
-                            <tr><td class="px-6 py-4 text-sm font-semibold text-gray-700">1.6</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Analyse Stratégique (Xpertsource)</td><td class="px-6 py-4 text-sm text-gray-600">4 août - 11 août</td><td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
-                            <tr><td class="px-6 py-4 text-sm font-semibold text-gray-700">1.7</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Création du Schéma "Moteur de Croissance"</td><td class="px-6 py-4 text-sm text-gray-600">4 août</td><td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
-                            <tr><td class="px-6 py-4 text-sm font-semibold text-gray-700">1.8</td><td class="px-6 py-4 text-sm font-medium text-gray-900">Sélection & Configuration Hébergement / Courriels</td><td class="px-6 py-4 text-sm text-gray-600">4 août - 15 août</td><td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-completed rounded-full">Complété</span></td></tr>
-                            
-                            <!-- Tâches en cours / à faire -->
-                             <tr class="bg-yellow-50"><td class="px-6 py-4" colspan="4"><span class="font-bold text-sm text-yellow-800">En cours / À venir</span></td></tr>
-                            <tr>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">1.9</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Rédaction des Politiques de Conformité (Loi 25)</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">18 août - 22 août</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-inprogress rounded-full">En cours</span></td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">1.10</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Configuration Initiale du CRM HubSpot</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">25 août - 5 sept.</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
-                            </tr>
-                             <tr>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-semibold text-gray-700">1.11</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Lancement Développement Web (Maquettes)</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">8 sept. - 19 sept.</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
-                            </tr>
+                            <tr><td class="px-4 py-3 text-sm">2.1</td><td class="px-4 py-3 text-sm">Finalisation du Développement du Site Web</td><td class="px-4 py-3 text-sm text-gray-600">23 sept. - 25 oct.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">2.2</td><td class="px-4 py-3 text-sm">Intégration Données Matrix (Manuelle)</td><td class="px-4 py-3 text-sm text-gray-600">(En parallèle)</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">2.3</td><td class="px-4 py-3 text-sm">Développement du Portail Client Sécurisé</td><td class="px-4 py-3 text-sm text-gray-600">30 sept. - 18 oct.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">2.4</td><td class="px-4 py-3 text-sm">Création des Workflows d'Automatisation</td><td class="px-4 py-3 text-sm text-gray-600">28 oct. - 1 nov.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">2.5</td><td class="px-4 py-3 text-sm">Mise en Ligne Officielle du Site Web</td><td class="px-4 py-3 text-sm text-gray-600">4 nov. - 8 nov.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">2.6</td><td class="px-4 py-3 text-sm">Création des Campagnes Publicitaires</td><td class="px-4 py-3 text-sm text-gray-600">4 nov. - 8 nov.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td></tr>
                         </tbody>
                     </table>
                 </div>
-            </section>
-            
-            <!-- Phase 2 -->
-            <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Phase 2 : Déploiement & Lancement (À venir)</h2>
-                <div class="overflow-x-auto bg-white rounded-lg shadow">
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Phase 3 : Optimisation & Croissance</h2>
+                 <div class="overflow-x-auto">
                     <table class="min-w-full divide-y divide-gray-200">
                          <thead class="bg-gray-50">
                             <tr>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">ID</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Tâche</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Dates</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Statut</th>
+                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">ID</th>
+                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Tâche</th>
+                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Dates Prévues</th>
+                                <th class="px-4 py-2 text-left text-xs font-bold text-gray-600 uppercase">Statut</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-semibold text-gray-700">2.1</td>
-                                <td class="px-6 py-4 text-sm font-medium text-gray-900">Finalisation du Développement du Site Web</td>
-                                <td class="px-6 py-4 text-sm text-gray-600">22 sept. - 24 oct.</td>
-                                <td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-semibold text-gray-700">2.2</td>
-                                <td class="px-6 py-4 text-sm font-medium text-gray-900">Intégration Données Matrix (Manuelle)</td>
-                                <td class="px-6 py-4 text-sm text-gray-600">(En parallèle)</td>
-                                <td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-semibold text-gray-700">2.3</td>
-                                <td class="px-6 py-4 text-sm font-medium text-gray-900">Développement du Portail Client Sécurisé</td>
-                                <td class="px-6 py-4 text-sm text-gray-600">29 sept. - 17 oct.</td>
-                                <td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-semibold text-gray-700">2.4</td>
-                                <td class="px-6 py-4 text-sm font-medium text-gray-900">Création des Workflows d'Automatisation</td>
-                                <td class="px-6 py-4 text-sm text-gray-600">27 oct. - 31 oct.</td>
-                                <td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-semibold text-gray-700">2.5</td>
-                                <td class="px-6 py-4 text-sm font-medium text-gray-900">Mise en Ligne Officielle du Site Web</td>
-                                <td class="px-6 py-4 text-sm text-gray-600">3 nov. - 7 nov.</td>
-                                <td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-semibold text-gray-700">2.6</td>
-                                <td class="px-6 py-4 text-sm font-medium text-gray-900">Création des Campagnes Publicitaires</td>
-                                <td class="px-6 py-4 text-sm text-gray-600">3 nov. - 7 nov.</td>
-                                <td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
-                            </tr>
+                            <tr><td class="px-4 py-3 text-sm">3.1</td><td class="px-4 py-3 text-sm">Lancement des Campagnes Publicitaires</td><td class="px-4 py-3 text-sm text-gray-600">Dès le 11 nov.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">3.2</td><td class="px-4 py-3 text-sm">Développement Stratégie "Pamphlet Voisinage"</td><td class="px-4 py-3 text-sm text-gray-600">11 nov. - 22 nov.</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td></tr>
+                            <tr><td class="px-4 py-3 text-sm">3.3</td><td class="px-4 py-3 text-sm">Gestion et Optimisation Continue</td><td class="px-4 py-3 text-sm text-gray-600">Dès nov. 2025</td><td class="px-4 py-3 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td></tr>
                         </tbody>
                     </table>
                 </div>
-            </section>
-
-            <!-- Phase 3 -->
-            <section>
-                <h2 class="text-2xl font-bold text-gray-800 mb-4">Phase 3 : Optimisation & Croissance (À venir)</h2>
-                <div class="overflow-x-auto bg-white rounded-lg shadow">
-                    <table class="min-w-full divide-y divide-gray-200">
-                         <thead class="bg-gray-50">
-                            <tr>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">ID</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Tâche</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Dates</th>
-                                <th class="px-6 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Statut</th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-semibold text-gray-700">3.1</td>
-                                <td class="px-6 py-4 text-sm font-medium text-gray-900">Lancement des Campagnes Publicitaires</td>
-                                <td class="px-6 py-4 text-sm text-gray-600">Dès le 10 nov.</td>
-                                <td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
-                            </tr>
-                            <tr>
-                                <td class="px-6 py-4 text-sm font-semibold text-gray-700">3.2</td>
-                                <td class="px-6 py-4 text-sm font-medium text-gray-900">Développement Stratégie "Pamphlet Voisinage"</td>
-                                <td class="px-6 py-4 text-sm text-gray-600">10 nov. - 21 nov.</td>
-                                <td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
-                            </tr>
-                             <tr>
-                                <td class="px-6 py-4 text-sm font-semibold text-gray-700">3.3</td>
-                                <td class="px-6 py-4 text-sm font-medium text-gray-900">Gestion et Optimisation Continue</td>
-                                <td class="px-6 py-4 text-sm text-gray-600">En continu</td>
-                                <td class="px-6 py-4 text-sm"><span class="px-2 py-1 font-semibold leading-tight status-todo rounded-full">À faire</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+            </div>
         </div>
     </div>
 </body>
