@@ -14,7 +14,7 @@
             background-color: #f9fafb; /* gray-50 */
         }
         .status-paid { background-color: #dcfce7; color: #166534; } /* green-100, green-800 */
-        .status-pending { background-color: #fef9c3; color: #854d0e; } /* yellow-100, yellow-800 */
+        .status-partial { background-color: #fef9c3; color: #854d0e; } /* yellow-100, yellow-800 */
         .status-due { background-color: #ffedd5; color: #9a3412; } /* orange-100, orange-800 */
         @media print {
             body {
@@ -33,13 +33,11 @@
             <div class="flex justify-between items-center">
                 <div>
                     <h1 class="text-3xl font-bold text-gray-900">Suivi Financier - Projet Agence 2.0</h1>
-                    <p class="mt-2 text-sm text-gray-600">Tableau de bord central pour le suivi des coûts, de la facturation et des paiements. Version du 17 août 2025.</p>
+                    <p class="mt-2 text-sm text-gray-600">Tableau de bord central pour le suivi des coûts, de la facturation et des paiements. Version du 29 août 2025.</p>
                 </div>
                 <div class="no-print">
                     <button onclick="window.print()" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
                         <span>Imprimer</span>
                     </button>
                 </div>
@@ -67,7 +65,7 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">3,750.00 $</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">3 août 2025</td>
                         <td class="px-6 py-4 whitespace-nowrap text-center text-xs font-medium">
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-due">Facturé</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-partial">Paiement partiel reçu</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-center text-sm">
                             <a href="https://hexwhisper.github.io/arthurJoncas/factures/facture-2025-001.html" target="_blank" class="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-xs px-3 py-1.5 text-center">Consulter</a>
@@ -78,7 +76,7 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">3,750.00 $</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">~ 5 sept. 2025</td>
                         <td class="px-6 py-4 whitespace-nowrap text-center text-xs font-medium">
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-pending">À facturer</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-due">À facturer</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-center text-sm">
                             <span class="text-gray-500 bg-gray-200 font-medium rounded-lg text-xs px-3 py-1.5 text-center cursor-not-allowed">À venir</span>
@@ -89,7 +87,7 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">5,000.00 $</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">~ 15 sept. 2025</td>
                         <td class="px-6 py-4 whitespace-nowrap text-center text-xs font-medium">
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-pending">À facturer</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-due">À facturer</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-center text-sm">
                            <span class="text-gray-500 bg-gray-200 font-medium rounded-lg text-xs px-3 py-1.5 text-center cursor-not-allowed">À venir</span>
@@ -100,7 +98,7 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">5,000.00 $</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">~ 3 nov. 2025</td>
                          <td class="px-6 py-4 whitespace-nowrap text-center text-xs font-medium">
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-pending">À facturer</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-due">À facturer</span>
                         </td>
                          <td class="px-6 py-4 whitespace-nowrap text-center text-sm">
                            <span class="text-gray-500 bg-gray-200 font-medium rounded-lg text-xs px-3 py-1.5 text-center cursor-not-allowed">À venir</span>
@@ -112,11 +110,11 @@
                         <td colspan="5" class="px-6 py-3 text-sm text-gray-800">Dépenses Externes Uniques (À la charge d'Arthur Joncas)</td>
                     </tr>
                     <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Licence Thème WordPress (Houzez)</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">~ 110 $</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Août 2025</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-center text-xs font-medium">
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-due">À Payer</span>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Licence Thème WordPress (WP Residence)</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">90.19 $US</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">18 août 2025</td>
+                         <td class="px-6 py-4 whitespace-nowrap text-center text-xs font-medium">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-paid">Payé</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-500 italic">Payé au fournisseur</td>
                     </tr>
@@ -127,7 +125,7 @@
                     </tr>
                     <tr>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Hébergement Web (Hostinger Business)</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">~ 70.38 $ / an</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">47.88 € / an</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">11 août 2025</td>
                         <td class="px-6 py-4 whitespace-nowrap text-center text-xs font-medium">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-paid">Payé</span>
@@ -144,11 +142,20 @@
                         <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-500 italic">Payé au fournisseur</td>
                     </tr>
                     <tr>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">API Google Maps</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">~ 0 $ / mois*</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Dès sept. 2025</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-center text-xs font-medium">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-due">À Configurer</span>
+                        </td>
+                        <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-500 italic">Payé au fournisseur</td>
+                    </tr>
+                    <tr>
                         <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Abonnement CRM HubSpot (Starter)</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">~ 20-50 $ / mois</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Dès nov. 2025</td>
                         <td class="px-6 py-4 whitespace-nowrap text-center text-xs font-medium">
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-pending">Récurrent</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-due">Récurrent</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-500 italic">Payé au fournisseur</td>
                     </tr>
@@ -157,7 +164,7 @@
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">500.00 $ / mois</td>
                         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Dès nov. 2025</td>
                         <td class="px-6 py-4 whitespace-nowrap text-center text-xs font-medium">
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-pending">Récurrent</span>
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full status-due">Récurrent</span>
                         </td>
                         <td class="px-6 py-4 whitespace-nowrap text-center text-sm text-gray-500 italic">Payé au fournisseur</td>
                     </tr>
@@ -176,11 +183,11 @@
                 </div>
                 <div class="bg-green-100 p-6 rounded-lg">
                     <h3 class="text-sm font-medium text-green-800 uppercase">Total Payé à ce Jour</h3>
-                    <p class="mt-1 text-3xl font-bold text-green-900">0.00 $</p>
+                    <p class="mt-1 text-3xl font-bold text-green-900">1,000.00 $</p>
                 </div>
                 <div class="bg-orange-100 p-6 rounded-lg">
                     <h3 class="text-sm font-medium text-orange-800 uppercase">Solde Restant (Honoraires)</h3>
-                    <p class="mt-1 text-3xl font-bold text-orange-900">17,500.00 $</p>
+                    <p class="mt-1 text-3xl font-bold text-orange-900">16,500.00 $</p>
                 </div>
             </div>
         </div>
